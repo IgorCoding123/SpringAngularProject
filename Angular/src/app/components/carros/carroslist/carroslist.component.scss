@@ -1,0 +1,128 @@
+/* Estilos para a lista de carros */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eaeaea;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+}
+
+.description {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.car-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.car-table thead {
+    background-color: #3498db;
+    color: white;
+}
+
+.car-table th {
+    padding: 18px 15px;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.car-table th:first-child {
+    border-top-left-radius: 8px;
+}
+
+.car-table th:last-child {
+    border-top-right-radius: 8px;
+}
+
+.car-table tbody tr {
+    border-bottom: 1px solid #eaeaea;
+    transition: background-color 0.2s;
+}
+
+.car-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.car-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.car-table tbody tr:nth-child(even):hover {
+    background-color: #f1f2f6;
+}
+
+.car-table td {
+    padding: 16px 15px;
+    font-size: 1rem;
+}
+
+.car-name {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.car-brand {
+    color: #7f8c8d;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #95a5a6;
+    font-size: 0.9rem;
+    padding-top: 20px;
+    border-top: 1px solid #eaeaea;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .car-table th, .car-table td {
+        padding: 12px 10px;
+        font-size: 0.95rem;
+    }
+}

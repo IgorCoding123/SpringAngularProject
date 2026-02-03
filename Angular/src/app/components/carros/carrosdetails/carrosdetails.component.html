@@ -1,0 +1,25 @@
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="card p-4" style="width: 100%; max-width: 400px;">
+        <h3 class="text-center mb-4">Cadastro de Carro</h3>
+
+
+        <div class="card">
+            <div class="card-body">
+
+                <mdb-form-control>
+                    <input mdbInput type="text" id="usuario" class="form-control" [(ngModel)]="carro.nome" />
+                    <label mdbLabel class="form-label" for="usuario">Nome</label>
+                </mdb-form-control>
+
+                
+
+                <div class="d-grid mt-4">
+                    <button type="button" class="btn btn-primary" mdbRipple (click)="salvar()">Salvar</button>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>

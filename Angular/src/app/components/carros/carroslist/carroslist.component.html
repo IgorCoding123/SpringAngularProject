@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Carros - Nome e Marca</title>
+    <link rel="stylesheet" href="carroslist.component.scss">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Lista de Carros</h1>
+            
+        </header>
+
+
+        <main>
+            <table class="car-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome do carro</th>
+                        <th>Ações</th>
+
+                        <div class="d-grid mt-4">
+                            <button type="button" class="btn btn-primary" mdbRipple
+                                routerLink="/admin/carros/new">Novo</button>
+                        </div>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (carro of lista; track $index) {
+                    <tr>
+                        <td class="car-id">{{carro.id}}</td>
+                        <td class="car-name">{{carro.nome}}</td>
+                        <td>
+                            <div class="d-grid mt-4">
+                                <button type="button" class="btn btn-primary" mdbRipple
+                                    routerLink="/admin/carros/edit/{{carro.id}}">Editar</button>
+                            </div>
+                            <div class="d-grid mt-4">
+                                <button type="button" class="btn btn-danger" mdbRipple
+                                    (click)="delete(carro)">Deletar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </main>
+
+        <footer class="footer">
+            <p>Lista com 3 modelos de carros e suas marcas correspondentes</p>
+        </footer>
+    </div>
+</body>
+
+</html>
